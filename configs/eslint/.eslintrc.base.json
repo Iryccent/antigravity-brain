@@ -1,0 +1,28 @@
+{
+    "rules": {
+        "no-unused-vars": "error",
+        "complexity": [
+            "warn",
+            12
+        ],
+        "max-lines-per-file": [
+            "warn",
+            350
+        ],
+        "no-console": [
+            "warn",
+            {
+                "allow": [
+                    "warn",
+                    "error"
+                ]
+            }
+        ],
+        "no-debugger": "error",
+        "eqeqeq": [
+            "error",
+            "always"
+        ],
+        "curly": "error"
+    }
+}

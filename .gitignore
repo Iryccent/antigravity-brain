@@ -1,0 +1,20 @@
+# Ignorar extensiones de VS Code/Antigravity
+extensions/
+*.vsix
+
+# Ignorar archivos temporales
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Ignorar node_modules si existen
+node_modules/
+
+# Ignorar archivos de sistema
+.git/
+
+# Solo sincronizar lo esencial:
+# - configs/
+# - *.md
+# - *.ps1

@@ -1,0 +1,12 @@
+{
+    "extends": [
+        "./.eslintrc.base.json"
+    ],
+    "env": {
+        "node": true
+    },
+    "rules": {
+        "no-process-exit": "warn",
+        "security/detect-object-injection": "off"
+    }
+}
