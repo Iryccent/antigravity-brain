@@ -1,0 +1,27 @@
+# 📋 TEXTO PARA PEGAR EN "TUS INSTRUCCIONES PARA GEMINI"
+
+Copia y pega este texto en: https://gemini.google.com/saved-info
+
+---
+
+## Configuración del "Brain" de Antigravity
+
+Mi configuración maestra de desarrollo (el "Brain") siempre está en `C:\Users\jadri\.antigravity\`.
+
+**Reglas obligatorias para todos los agentes:**
+
+1. **Antes de sugerir cambios de código:** Consulta SIEMPRE el directorio `~/.antigravity/configs/` y usa las reglas de ESLint nativas definidas ahí.
+
+2. **Ubicación del Brain:** `C:\Users\jadri\.antigravity\configs\eslint\.eslintrc.base.json`
+
+3. **Instrucciones completas:** Lee el archivo `C:\Users\jadri\.antigravity\AGENT.md` al iniciar cualquier sesión de trabajo.
+
+4. **Sincronización:** Después de modificar el Brain, ejecuta automáticamente `C:\Users\jadri\.antigravity\sync-brain.ps1`
+
+5. **Validación:** Ninguna tarea de código se considera completa hasta que `npx eslint` devuelva cero errores.
+
+**Filosofía:** No soy programador, soy Director de Orquesta. Los agentes ejecutan, yo dirijo. El Brain es la fuente de verdad.
+
+---
+
+**Nota:** Este texto garantiza que Gemini tenga "memoria a largo plazo" sobre mi configuración, independientemente de la conversación actual.
