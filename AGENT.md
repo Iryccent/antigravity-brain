@@ -77,7 +77,39 @@ powershell -File C:\Users\jadri\.antigravity\sync-brain.ps1
 
 ---
 
-### 3. Regla de Validación Obligatoria (The Shield)
+### 4. Regla de Anti-Telemetría (Privacy First)
+
+**TODA telemetría, analytics, y tracking DEBE estar desactivada por defecto en cualquier configuración.**
+
+**Aplicaciones afectadas:**
+- VS Code / Antigravity
+- Extensiones (RedHat, GitLens, etc.)
+- Frameworks (Next.js, Vite, etc.)
+- Servicios de terceros
+
+**Configuraciones obligatorias:**
+```json
+{
+  "redhat.telemetry.enabled": false,
+  "telemetry.telemetryLevel": "off",
+  "gitlens.telemetry.enabled": false,
+  // Cualquier otra telemetría: false
+}
+```
+
+**Propósito:**
+- Proteger la privacidad del usuario
+- Reducir tráfico de red innecesario
+- Evitar compartir código/datos con terceros
+
+**PROHIBIDO:**
+- ❌ Activar telemetría sin permiso explícito del usuario
+- ❌ Asumir que "anonymous telemetry" es aceptable
+- ❌ Dejar telemetría activada "por defecto"
+
+---
+
+### 5. Regla de Validación Obligatoria (The Shield)
 
 **Ninguna tarea de codificación se considera finalizada hasta que el comando `npx eslint` devuelva cero errores.**
 
@@ -189,5 +221,5 @@ Si eres un agente nuevo trabajando con Jadriel:
 ---
 
 **Última actualización:** 2026-02-03  
-**Versión:** 1.1 (Agregada Regla #0: Saludo de Confirmación)  
+**Versión:** 1.2 (Agregada Regla #4: Anti-Telemetría)  
 **Autor:** Jadriel + Antigravity (Claude 3.5 Sonnet)

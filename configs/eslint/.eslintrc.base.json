@@ -5,7 +5,7 @@
             "warn",
             12
         ],
-        "max-lines-per-file": [
+        "max-lines": [
             "warn",
             350
         ],
