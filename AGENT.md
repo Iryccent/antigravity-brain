@@ -109,6 +109,25 @@ powershell -File C:\Users\jadri\.antigravity\sync-brain.ps1
 
 ---
 
+### 6. Regla de Zero-Exposure API Keys (Security First)
+
+**NUNCA, bajo NINGUNA circunstancia, debes escribir una API Key real en el código, archivos JSON, o logs.**
+
+- 🔒 **Método ÚNICO:** Usa variables de entorno (`.env`)
+- 📄 **Referencia:** `${ENV_VAR_NAME}` en archivos de configuración
+- 🚫 **PROHIBIDO:** 
+  - `key: "sk-..."` (Hardcoded)
+  - `console.log(apiKey)` (Logging)
+  - Hacer commit de `.env` (Source Control)
+
+**Si encuentras una key expuesta:**
+1. **Borra** inmediatamente la key del archivo.
+2. **Rota** la key si es posible o notifica al usuario.
+3. **Reemplaza** con `${VARIABLE}`.
+
+---
+
+
 ### 5. Regla de Validación Obligatoria (The Shield)
 
 **Ninguna tarea de codificación se considera finalizada hasta que el comando `npx eslint` devuelva cero errores.**
@@ -164,14 +183,21 @@ C:\Users\jadri\.antigravity\
 3. **Confirmar configuración de Antigravity IDE:**
    - Verificar que `settings.json` tenga `eslint.useFlatConfig: true`
 
+4. **Leer documentación del AXIS_HUB:**
+   ```bash
+   cat C:\Users\jadri\IRYCCENT_AXIS_HUB\BRAIN_README.md
+   ```
+   - Explica cómo el puente maestro gobier all projects
+
 ### Durante el trabajo:
 
 1. **Antes de editar código:**
    - Consultar las reglas del Brain
-   - Asegurar que el proyecto tenga `eslint.config.mjs` apuntando al Brain
+   - El AXIS_HUB tiene un `eslint.config.mjs` maestro en la raíz que gobierna TODOS los proyectos
+   - Proyectos individuales pueden extender (pero NO contradecir) al Brain
 
 2. **Después de editar código:**
-   - Ejecutar `npx eslint .`
+   - Ejecutar `npx eslint [archivo]` desde la raíz del AXIS_HUB
    - Corregir errores hasta obtener cero problemas
 
 3. **Antes de finalizar:**
