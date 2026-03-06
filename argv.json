@@ -1,20 +1,81 @@
-// This configuration file allows you to pass permanent command line arguments to VS Code.
-// Only a subset of arguments is currently supported to reduce the likelihood of breaking
-// the installation.
-//
-// PLEASE DO NOT CHANGE WITHOUT UNDERSTANDING THE IMPACT
-//
-// NOTE: Changing this file requires a restart of VS Code.
+// Antigravity Brain - Configuración Global Optimizada
+// Versión 2.0 - Multi-agente + MCP + Orquestación Paralela
+// IMPORTANTE: Reiniciar Antigravity IDE después de modificar este archivo.
 {
-	// Use software rendering instead of hardware accelerated rendering.
-	// This can help in cases where you see rendering issues in VS Code.
+	// ── Renderizado ──────────────────────────────────────────────────
 	// "disable-hardware-acceleration": true,
 
-	// Allows to disable crash reporting.
-	// Should restart the app if the value is changed.
-	"enable-crash-reporter": true,
+	// ── Crash Reporting ──────────────────────────────────────────────
+	"enable-crash-reporter": false,
+	"crash-reporter-id": "0a5fdc1e-7144-4c1a-a902-9494eef7efc6",
 
-	// Unique id used for correlating crash reports sent from this instance.
-	// Do not edit this value.
-	"crash-reporter-id": "0a5fdc1e-7144-4c1a-a902-9494eef7efc6"
+	// ── Telemetría (DESACTIVADA - Privacy First) ─────────────────────
+	"disable-telemetry": true,
+
+	// ── Configuración Multi-Agente ────────────────────────────────────
+	// Número máximo de agentes ejecutándose en paralelo
+	"max-parallel-agents": 3,
+
+	// Agentes disponibles
+	"agents": [
+		{
+			"id": "react-component-specialist",
+			"name": "React Component Specialist",
+			"skills": ["create-feature"],
+			"priority": 1
+		},
+		{
+			"id": "test-guardian",
+			"name": "Test Guardian",
+			"skills": ["test-suite"],
+			"priority": 2,
+			"min-coverage": 85
+		},
+		{
+			"id": "ruthless-code-reviewer",
+			"name": "Ruthless Code Reviewer",
+			"skills": ["refactor-code"],
+			"priority": 3
+		}
+	],
+
+	// ── Orquestación ─────────────────────────────────────────────────
+	"orchestration": {
+		"mode": "parallel",
+		"require-review-before-merge": true,
+		"require-tests-before-merge": true,
+		"min-test-coverage": 85,
+		"block-on-eslint-errors": true
+	},
+
+	// ── MCP Integrations ─────────────────────────────────────────────
+	"mcp": {
+		"firecrawl": {
+			"enabled": true,
+			"api-key-env": "FIRECRAWL_API_KEY"
+		},
+		"supabase": {
+			"enabled": true,
+			"url-env": "SUPABASE_URL",
+			"key-env": "SUPABASE_ANON_KEY"
+		},
+		"github-actions": {
+			"enabled": true,
+			"auto-verify-before-merge": true,
+			"artifacts": true
+		}
+	},
+
+	// ── Sandbox ───────────────────────────────────────────────────────
+	"sandbox": {
+		"strict": true,
+		"block-direct-main-push": true,
+		"require-pr": true,
+		"environments": ["local", "staging", "production"]
+	},
+
+	// ── Brain Path ────────────────────────────────────────────────────
+	"brain-path": "${HOME}/.antigravity",
+	"rules-path": "${HOME}/.antigravity/rules/rules.md",
+	"skills-path": "${HOME}/.antigravity/skills"
 }
