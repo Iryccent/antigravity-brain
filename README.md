@@ -70,6 +70,24 @@ Los 3 agentes pueden ejecutarse **en paralelo** para máxima productividad.
    powershell -File ~/.antigravity/skills/refactor-code/scripts/refactor.ps1 -Target src/
    ```
 
+## 📚 Guías y Documentación
+
+### Configuración (primer uso)
+| Documento | Descripción |
+|-----------|-------------|
+| [`configs/eslint/INSTALLATION_GUIDE.md`](./configs/eslint/INSTALLATION_GUIDE.md) | **Guía completa de instalación** — ESLint global, VS Code, plugins |
+| [`configs/GITHUB_PERSISTENCE_SETUP.md`](./configs/GITHUB_PERSISTENCE_SETUP.md) | Sincronización del Brain entre máquinas vía GitHub |
+| [`configs/eslint/TEAM_MESSAGE.md`](./configs/eslint/TEAM_MESSAGE.md) | Mensaje para distribuir la gobernanza al equipo |
+| [`configs/eslint/EMERGENCY_PROTOCOL_ANTIGRAVITY.md`](./configs/eslint/EMERGENCY_PROTOCOL_ANTIGRAVITY.md) | Protocolo de rescate ante conflictos críticos |
+
+### Reglas y Skills
+| Documento | Descripción |
+|-----------|-------------|
+| [`rules/rules.md`](./rules/rules.md) | Reglas globales: código, seguridad, arquitectura, tests |
+| [`skills/create-feature/SKILL.md`](./skills/create-feature/SKILL.md) | Cómo usar el scaffold de features |
+| [`skills/refactor-code/SKILL.md`](./skills/refactor-code/SKILL.md) | Cómo usar el analizador de calidad |
+| [`skills/test-suite/SKILL.md`](./skills/test-suite/SKILL.md) | Cómo usar la suite de tests |
+
 ## 🛡️ Reglas Activas
 
 - ❌ **Error:** Imports no usados
