@@ -10,11 +10,35 @@ Thumbs.db
 
 # Ignorar node_modules si existen
 node_modules/
+package-lock.json
 
 # Ignorar archivos de sistema
 .git/
 
+# Ignorar backups automáticos del sync
+.antigravity-backups/
+backups/
+*.backup
+*.bak
+
+# Ignorar archivos de entorno (seguridad)
+.env
+.env.local
+.env.staging
+.env.production
+.env*.local
+
+# Ignorar archivos de build
+dist/
+build/
+.next/
+out/
+coverage/
+
 # Solo sincronizar lo esencial:
 # - configs/
+# - rules/
+# - skills/
 # - *.md
 # - *.ps1
+# - *.json (excepto package-lock)
